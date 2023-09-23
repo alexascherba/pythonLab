@@ -1,0 +1,16 @@
+from tkinter import *
+def clicked():
+    res = "Hello {}".format(txt.get())
+    lbl.configure(text=res)
+window = Tk()
+window.title("Window")
+# window.geometry('820x160')
+# window.resizable(True,False)
+lbl = Label(window, text="Hello world:)")
+lbl.grid(column=0, row=0)
+btn = Button(window, text="Ok", command=clicked)
+btn.grid(column=2, row=0)
+txt = Entry(window, width=10)
+txt.grid(column=1, row=0)
+txt.focus()
+window.mainloop()
