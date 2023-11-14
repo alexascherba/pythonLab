@@ -4,7 +4,7 @@ import pygame
 from snake import *
 import sys
 from food import Food
-
+#test commit/ new
 def button_clicked(number):
     if number == 1:
         print(f"Button 1 clicked!")
