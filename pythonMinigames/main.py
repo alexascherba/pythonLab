@@ -4,6 +4,9 @@ import pygame
 from snake import *
 import sys
 from food import Food
+
+from shooter import *
+
 #test commit/ new new nnnn
 def button_clicked(number):
     if number == 1:
@@ -53,9 +56,12 @@ def button_clicked(number):
             pygame.display.flip()
 
 
+
     elif number == 3:
         print(f"Button 3 clicked!")
         root.destroy()  # Close the window after button click
+
+
     elif number == 4:
         print(f"Button 4 clicked!")
         root.destroy()  # Close the window after button click
@@ -79,7 +85,7 @@ button_style = ttk.Style()
 button_style.configure("TButton", font=("Anonymous Pro", 32), background="#EAE0DB", foreground="#8AAEBC", padding=(20, 10))
 
 # Создаем кнопки с разными надписями
-button_labels = ["Tetris", "Snake", "Game 3", "Game 4"]
+button_labels = ["Tetris", "Snake", "8-bit Shooter", "Game 4"]
 buttons = []
 for i, label_text in enumerate(button_labels, start=1):
     button = ttk.Button(root, text=label_text, style="TButton", command=lambda num=i: button_clicked(num))
